@@ -1,0 +1,21 @@
+{
+  "name": "نور الحق",
+  "short_name": "نور الحق",
+  "description": "تطبيق إسلامي شامل لمواقيت الصلاة، القرآن، والأذكار",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a472a",
+  "icons": [
+    {
+      "src": "https://picsum.photos/seed/islamic/192/192",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://picsum.photos/seed/islamic/512/512",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

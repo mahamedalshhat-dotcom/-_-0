@@ -1,0 +1,51 @@
+{
+  "entities": {
+    "users": {
+      "title": "User Profile",
+      "description": "Stores user preferences and basic profile info.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "adhanSound": { "type": "string" },
+        "adhkarSound": { "type": "string" },
+        "location": {
+          "type": "object",
+          "properties": {
+            "city": { "type": "string" },
+            "country": { "type": "string" },
+            "latitude": { "type": "number" },
+            "longitude": { "type": "number" }
+          }
+        },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email"]
+    },
+    "prayerLogs": {
+      "title": "Prayer Log",
+      "description": "Tracks which prayers the user has completed.",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "prayerName": { "type": "string" },
+        "date": { "type": "string", "format": "date" },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "status": { "type": "string", "enum": ["completed", "missed"] }
+      },
+      "required": ["userId", "prayerName", "date", "timestamp"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "users",
+      "description": "User profile and settings"
+    },
+    "/users/{userId}/prayerLogs/{logId}": {
+      "schema": "prayerLogs",
+      "description": "Daily prayer completion logs"
+    }
+  }
+}

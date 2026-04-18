@@ -1,0 +1,15 @@
+{
+  "name": "Noor Al-Haq | نور الحق",
+  "description": "نور الحق هو تطبيق إسلامي شامل يعمل بدون إنترنت، يتميز بمصحف كامل، مواقيت صلاة ذكية، تصحيح تلاوة بالذكاء الاصطناعي، وأدوات روحية مع التركيز على الخصوصية والسرعة.",
+  "requestFramePermissions": [
+    "geolocation",
+    "microphone",
+    "screen-wake-lock"
+  ],
+  "majorCapabilities": [
+    "Offline-First Architecture",
+    "AI Recitation Correction",
+    "Smart Prayer Notifications",
+    "Local Quran Database"
+  ]
+}
